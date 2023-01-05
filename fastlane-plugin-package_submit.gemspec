@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = 'ddflj3210@gmail.com'
 
   spec.summary       = 'Upload ipa and associated .plist to specified server.'
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-package_submit"
+  spec.homepage      = "https://github.com/akring/fastlane-plugin-package_submit"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
