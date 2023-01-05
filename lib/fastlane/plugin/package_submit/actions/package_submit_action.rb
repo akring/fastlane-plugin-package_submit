@@ -25,7 +25,7 @@ module Fastlane
         ipa_url=params[:ipa_url]
 
         UI.message("💻 ===== 提交更新信息 =====")
-        uri = URI(endPoint)
+        uri = URI(endpoint)
         req = Net::HTTP::Post.new(uri, 'Content-Type' => 'application/json')
         req.body = {
           'appName': app_name,
@@ -120,7 +120,12 @@ module Fastlane
                                   env_name: "",
                                 description: "cos ipa 路径",
                                   optional: false,
-                                      type: String),       
+                                      type: String),     
+          FastlaneCore::ConfigItem.new(key: :git_log,
+                                  env_name: "",
+                                description: "git 提交日志",
+                                  optional: false,
+                                      type: String),     
         ]
       end
 
